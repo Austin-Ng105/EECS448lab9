@@ -1,0 +1,31 @@
+<html>
+    <head>
+        Lab 9 Exercise 1:
+    </head>
+    <body>
+        <table id="multiTable">
+        </table>
+        <script>
+            var table = document.getElementById("multiTable");
+            var tempNum;
+            for(var i = 100; i >= 1; i--){
+                var newRow = table.insertRow(0);
+                for(var j = 100; j >= 1; j--){
+                    var tempCell = newRow.insertCell(0);
+                    tempNum = i*j;
+                    tempCell.innerHTML = tempNum;
+                }
+
+            }
+
+            /*
+            for(var i = 100; i >= 1 ; i--){
+                newRow.insertCell(0).outerHTML ="<th>" + i + "</th>";
+                
+            }
+            newRow.insertCell(0).outerHTML ="<th>" + "X" + "</th>";
+            newRow.insertCell(0).outerHTML ="<th>" + 1 + "</th>";
+            */
+        </script>
+    </body>
+</html>
