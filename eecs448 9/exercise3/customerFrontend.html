@@ -1,0 +1,35 @@
+<html>
+    <head>Candle Store</head>
+    <form>
+        <label for="username">Username:(name@domain.com)</label><br>
+        <input type="text" id="username" name="username"><br>
+        <label for="password">Password:(123)</label><br>
+        <input type="text" id="password" name="password"><br><br>
+
+        <p>Chose a Price option:</p>
+                <input type="text" id="price10A" name="price10A" value = "0">
+                <label for="price10A">10$ Quantity</label><br>
+
+            <input type="text" id="price30A" name="price30A" value = "0">
+            <label for="pric310A"> 30$ Quantity</label><br>   
+        
+        <input type="text" id="price50A" name="price10A" value = "0">
+        <label for="price50A">50$ Quantity</label><br>
+
+        <p>Chose Shipping</p>
+        <input type="radio" id="shipFree" name="ship" value="shipFree">
+            <label for="Q5a">Free 7 day</label><br>
+
+        <input type="radio" id="ship50" name="ship" value="ship50">
+            <label for="Q5a">50$ over night</label><br>
+
+        <input type="radio" id="ship5" name="ship" value="ship5">
+            <label for="Q5a">5$ three day</label><br>
+
+
+        <input type="submit" value="Submit" onclick="test(document.getElementById('username'),document.getElementById('password'))">
+        <input type="submit" value="Reset" onclick="reload()">
+
+    </form>
+    <script src="formChecker.js"></script>
+</html>

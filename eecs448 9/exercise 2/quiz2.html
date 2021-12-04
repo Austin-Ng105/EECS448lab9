@@ -1,0 +1,115 @@
+<html>
+    <head>
+        Lab 10 Exercise 2:
+    </head>
+    <body>
+        <form>
+        
+                <p>Question 1: What is 2x2</p>
+                <input type="radio" id="Q1a" name="Q1" value="4">
+                <label for="Q1a"> 4</label> <br>
+                <input type="radio" id="Q1b" name="Q1" value="45">
+                <label for="Q1a"> 45</label> <br>
+                <input type="radio" id="Q1c" name="Q1" value="12">
+                <label for="Q1a"> 12</label> <br>
+                <input type="radio" id="Q1d" name="Q1" value="67">
+                <label for="Q1a"> 67</label> <br>
+ 
+                <p>Question 2: What is color is raven</p>
+                <input type="radio" id="Q2a" name="Q2" value="brown"> 
+                <label for="Q2a"> Brown </label><br>
+                <input type="radio" id="Q2b" name="Q2" value="black"> 
+                <label for="Q2b">Black</label><br>
+                <input type="radio" id="Q2c" name="Q2" value="red">  
+                <label for="Q2c">Red</label><br>
+                <input type="radio" id="Q2d" name="Q2" value="yellow"> 
+                <label for="Q2d"> Yellow </label><br>
+
+                <p>Question 3: What is capital of Japan:</p>
+                <input type="radio" id="Q3a" name="Q3" value="osaka"> 
+                <label for="Q3a">Osaka</label><br>
+                <input type="radio" id="Q3b" name="Q3" value="tokyo"> 
+                <label for="Q3b">Tokyo</label><br>
+                <input type="radio" id="Q3c" name="Q3" value="kyoto">
+                <label for="Q3c">Kyoto</label><br>
+                <input type="radio" id="Q3d" name="Q3" value="sapporo">
+                <label for="Q3d">Sapporo</label><br>
+    
+                <p>Question 4: Which animal lay eggs</p>
+                <input type="radio" id="Q4a" name="Q4" value="cow">
+                <label for="Q4a">Cow</label><br>
+                <input type="radio" id="Q4b" name="Q4" value="sheep">
+                <label for="Q4b">Sheep</label><br>
+                <input type="radio" id="Q4c" name="Q4" value="chicken">
+                <label for="Q4c">Chicken</label><br>
+                <input type="radio" id="Qd4" name="Q4" value="goat">
+                <label for="Q4d">Goat</label><br>
+
+                <p>Question 5: Which element is O:</p>
+                <input type="radio" id="Q5a" name="Q5" value="nitrogen">
+                <label for="Q5a">Nitrogen</label><br>
+                <input type="radio" id="Q5b" name="Q5" value="hydrogen">
+                <label for="Q5b">Hydrogen</label><br>
+                <input type="radio" id="Q5c" name="Q5" value="iron">
+                <label for="Q5c">Iron</label><br>
+                <input type="radio" id="Q5d" name="Q5" value="oxygen">
+                <label for="Q5d">Oxygen</label><br>
+
+                
+                <input type="submit" id="submit" value="Submit Quiz" onclick ="gradeQuiz()">
+        </form>
+        <script>
+            function gradeQuiz() {
+                var grade = 0;
+                var test1 = document.querySelector('input[name="Q1"]:checked').value;
+                var test2 = document.querySelector('input[name="Q2"]:checked').value;
+                var test3 = document.querySelector('input[name="Q3"]:checked').value;
+                var test4 = document.querySelector('input[name="Q4"]:checked').value;
+                var test5 = document.querySelector('input[name="Q5"]:checked').value;
+
+                document.write("Question 1: What is 2x2: " + "<br>");
+                document.write("You answered: " + test1 + "<br>");
+                document.write("Correct answer: 4" + "<br>");
+                
+                document.write("<br>" + "Question 2: What is color is raven: " + "<br>");
+                document.write("You answered: " + test2 + "<br>");
+                document.write("Correct answer: Black" + "<br>");
+
+                document.write("<br>" +" Question 3: What is capital of Japan: " + "<br>");
+                document.write("You answered: " + test3 + "<br>");
+                document.write("Correct answer: Tokyo" + "<br>");
+
+                document.write("<br>" + "Question 4: Which animal lay eggs: " + "<br>");
+                document.write("<br>" + "You answered: " + test4 + "<br>");
+                document.write("Correct answer: Chicken" + "<br>");
+
+                document.write("<br>" + "Question 5: Which element is O " + "<br>");
+                document.write("You answered: " + test5 + "<br>");
+                document.write("Correct answer: Oxygen" + "<br>");
+
+                if(test1 == '4'){
+                    grade += 20;
+      
+                }
+                if(test2 == "black"){
+                    grade += 20;
+
+                }
+                if(test3 == "tokyo"){
+                    grade += 20;
+
+                }
+                if(test4 == "chicken"){
+                    grade += 20;
+
+                }
+                if(test5 == "oxygen"){
+                    grade += 20;
+
+                }
+                document.write(" <br>"+"Grade: " +grade +"%");
+
+            }
+        </script>
+    </body>
+</html>
